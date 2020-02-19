@@ -55,7 +55,6 @@ public class Functions {
         else{
             System.out.println("No Contacts.");
         }
-
     }
 
 }
