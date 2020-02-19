@@ -35,7 +35,8 @@ public class LinkedList {
         Node current = first;
         int index = 0;
         while (current != null) {
-            if (current.value == element) {
+            if ((current.value.getFirstName()+current.value.getLastName()).equals(element.getFirstName()+element.getLastName())
+                    &&current.value.getEmail().equals(element.getEmail())) {
                 return index;
             }
             index++;
@@ -137,6 +138,17 @@ public class LinkedList {
             System.out.println("Name:"+current.value.getFirstName()+" "+current.value.getLastName());
             System.out.println("Contacts:"+current.value.getContacts().toString());
             System.out.println("Email:"+current.value.getEmail());
+            current = current.next;
+        }
+        System.out.println("------------------------*-------------------------");
+        System.out.println();
+    }
+
+    public void displayOne(){
+        var current = first;
+        System.out.println("-----------------------*-------------------------");
+        while (current != null) {
+            System.out.println("Name:"+current.value.getFirstName()+" "+current.value.getLastName());
             current = current.next;
         }
         System.out.println("------------------------*-------------------------");

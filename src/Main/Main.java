@@ -42,7 +42,7 @@ public class Main {
                     break;
                 case "3"://need to add function
                     break;
-                case "4"://need to add function
+                case "4":functions.deleteContact(linkedList);
                     break;
                 case "5":
                     c=5;

@@ -27,8 +27,23 @@ public class Functions {
         linkedList.display();
     }
 
-    public void searchContact(){
-        
+//    public void searchContact(LinkedList linkedList){
+//        System.out.println("Enter Name of the user you want to search:");
+//        String name = scanner.nextLine();
+//        System.out.println("Enter email of the user:");
+//        String email = scanner.nextLine();
+//
+//        linkedList.contains()
+//    }
+
+    public void deleteContact(LinkedList linkedList){
+        System.out.println("Here are all the contacts: Press the number against" +
+                " to delete the contact.");
+        linkedList.displayOne();
+        int choice = scanner.nextInt();
+        linkedList.deleteBetween(choice);
+        linkedList.displayOne();
+        System.out.println("Deleted..!!");
     }
 
 }
