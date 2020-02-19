@@ -10,10 +10,10 @@ public class Person {
 
     private String firstName;
     private String lastName;
-    private ArrayList<Integer> contacts;
+    private ArrayList<String> contacts;
     private String email;
 
-    public Person(String firstName,String lastName,ArrayList<Integer> contacts,String email){
+    public Person(String firstName,String lastName,ArrayList<String> contacts,String email){
         this.firstName=firstName;
         this.lastName=lastName;
         this.contacts=contacts;
@@ -36,11 +36,11 @@ public class Person {
         this.lastName = lastName;
     }
 
-    public ArrayList<Integer> getContacts() {
+    public ArrayList<String> getContacts() {
         return contacts;
     }
 
-    public void setContacts(ArrayList<Integer> contacts) {
+    public void setContacts(ArrayList<String> contacts) {
         this.contacts = contacts;
     }
 
