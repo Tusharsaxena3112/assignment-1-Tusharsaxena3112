@@ -78,47 +78,6 @@ public class LinkedList {
         }
         return index;
     }
-
-//    public void sort() {
-//        int temp;
-//        for (int i = size() - 1; i > 1; i--) {
-//            var current = first;
-//            for (int j = 0; j < i; j++) {
-//                if (current.value > current.next.value) {
-//                    temp = current.value;
-//                    current.value = current.next.value;
-//                    current.next.value = temp;
-//                }
-//                current = current.next;
-//            }
-//        }
-//    }
-
-//    public void addAt(int pos, int element) {
-//        Node node = new Node(element);
-//        var current = first;
-//        int index = 1;
-//        while (index < pos - 1) {
-//            current = current.next;
-//            index++;
-//        }
-//        node.next = current.next;
-//        current.next = node;
-//    }
-
-//    public void deleteBetween(int pos) {
-//        int index = 0;
-//        Node current = first;
-//        while (index < pos) {
-//            current = current.next;
-//            index++;
-//        }
-//        var previousNode = getPreviousNode(current);
-//        previousNode.next = current.next;
-//        current.next = null;
-//
-//    }
-
     public void deleteNode(int position)
     {
         // If linked list is empty
