@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Functions {
-    Scanner scanner = new Scanner(System.in);
+    private Scanner scanner = new Scanner(System.in);
     public void addContact(LinkedList linkedList){
         ArrayList<String> arrayList = new ArrayList<>();
         System.out.println("Enter your first Name:");

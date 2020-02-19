@@ -31,12 +31,12 @@ public class LinkedList {
         return first == null;
     }
 
-    public int indexOf(Person element) {
+    public int indexOf(String firstName,String email) {
         Node current = first;
         int index = 0;
         while (current != null) {
-            if ((current.value.getFirstName()+current.value.getLastName()).equals(element.getFirstName()+element.getLastName())
-                    &&current.value.getEmail().equals(element.getEmail())) {
+            if ((current.value.getFirstName().equals(firstName)
+                    &&current.value.getEmail().equals(email))){
                 return index;
             }
             index++;
@@ -45,8 +45,8 @@ public class LinkedList {
         return -1;
     }
 
-    public boolean contains(Person element) {
-        if (indexOf(element) != -1) {
+    public boolean contains(String firstName,String email) {
+        if (indexOf(firstName,email) != -1) {
             return true;
         }
         return false;
