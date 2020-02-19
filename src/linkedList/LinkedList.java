@@ -106,17 +106,42 @@ public class LinkedList {
 //        current.next = node;
 //    }
 
-    public void deleteBetween(int pos) {
-        int index = 0;
-        Node current = first;
-        while (index < pos) {
-            current = current.next;
-            index++;
-        }
-        var previousNode = getPreviousNode(current);
-        previousNode.next = current.next;
-        current.next = null;
+//    public void deleteBetween(int pos) {
+//        int index = 0;
+//        Node current = first;
+//        while (index < pos) {
+//            current = current.next;
+//            index++;
+//        }
+//        var previousNode = getPreviousNode(current);
+//        previousNode.next = current.next;
+//        current.next = null;
+//
+//    }
 
+    public void deleteNode(int position)
+    {
+        // If linked list is empty
+        if (first == null)
+            return;
+        // Store head node
+        Node temp = first;
+        // If head needs to be removed
+        if (position == 0)
+        {
+            first = temp.next;   // Change head
+            return;
+        }
+        // Find previous node of the node to be deleted
+        for (int i=0; temp!=null && i<position-1; i++)
+            temp = temp.next;
+        // If position is more than number of ndoes
+        if (temp == null || temp.next == null)
+            return;
+        // Node temp->next is the node to be deleted
+        // Store pointer to the next of node to be deleted
+        Node next = temp.next.next;
+        temp.next = next;  // Unlink the deleted node from list
     }
 
 
@@ -133,23 +158,28 @@ public class LinkedList {
 
     public void display() {
         var current = first;
-        System.out.println("-----------------------*-------------------------");
+        System.out.println("Contact list--->");
+        System.out.println();
         while (current != null) {
-            System.out.println("Name:"+current.value.getFirstName()+" "+current.value.getLastName());
-            System.out.println("Contacts:"+current.value.getContacts().toString());
-            System.out.println("Email:"+current.value.getEmail());
+            System.out.println("-----------------------*-------------------------");
+            System.out.println("Name:" + current.value.getFirstName() + " " + current.value.getLastName());
+            System.out.println("Contacts:" + current.value.getContacts().toString());
+            System.out.println("Email:" + current.value.getEmail());
+            System.out.println("------------------------*-------------------------");
+            System.out.println();
             current = current.next;
         }
-        System.out.println("------------------------*-------------------------");
         System.out.println();
     }
 
     public void displayOne(){
         var current = first;
+        int count = 0;
         System.out.println("-----------------------*-------------------------");
         while (current != null) {
-            System.out.println("Name:"+current.value.getFirstName()+" "+current.value.getLastName());
+            System.out.println(count+" Name:"+current.value.getFirstName()+" "+current.value.getLastName());
             current = current.next;
+            count++;
         }
         System.out.println("------------------------*-------------------------");
         System.out.println();

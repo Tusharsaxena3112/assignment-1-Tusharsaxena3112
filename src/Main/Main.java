@@ -49,7 +49,7 @@ public class Main {
                     System.out.println("Thank you for using our App..");
                     break;
                 default:
-                    // need to add functionality
+                    System.out.println("Invalid choice!! Please select a valid choice.");
             }
         }
 

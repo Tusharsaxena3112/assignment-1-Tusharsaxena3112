@@ -7,9 +7,9 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Functions {
-    ArrayList<String> arrayList = new ArrayList<>();
     Scanner scanner = new Scanner(System.in);
     public void addContact(LinkedList linkedList){
+        ArrayList<String> arrayList = new ArrayList<>();
         System.out.println("Enter your first Name:");
         String firstName = scanner.nextLine();
         System.out.println("Enter your last Name:");
@@ -24,7 +24,13 @@ public class Functions {
     }
 
     public void showContacts(LinkedList linkedList){
-        linkedList.display();
+        if(!linkedList.isEmpty()){
+            linkedList.display();
+        }
+        else{
+            System.out.println("No contacts.");
+        }
+
     }
 
 //    public void searchContact(LinkedList linkedList){
@@ -37,13 +43,19 @@ public class Functions {
 //    }
 
     public void deleteContact(LinkedList linkedList){
-        System.out.println("Here are all the contacts: Press the number against" +
-                " to delete the contact.");
-        linkedList.displayOne();
-        int choice = scanner.nextInt();
-        linkedList.deleteBetween(choice);
-        linkedList.displayOne();
-        System.out.println("Deleted..!!");
+        if(!linkedList.isEmpty()){
+            System.out.println("Here are all the contacts: Press the number against" +
+                    " to delete the contact.");
+            linkedList.displayOne();
+            int choice = scanner.nextInt();
+            linkedList.deleteNode(choice);
+            linkedList.displayOne();
+            System.out.println("Deleted..!!");
+        }
+        else{
+            System.out.println("No Contacts.");
+        }
+
     }
 
 }
