@@ -5,6 +5,8 @@ import person.Person;
 
 import java.util.Scanner;
 
+import functions.Functions;
+
 public class Main {
 
     //Press 1 to add a new contact
@@ -16,6 +18,8 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         LinkedList linkedList = new LinkedList<Person>();
+        Functions functions = new Functions();
+
         System.out.println("Hey there !! My name is Tushar Saxena " +
                 ".. Here what can I do for you--->>");
         while(true) {
@@ -30,7 +34,8 @@ public class Main {
             String choice = scanner.nextLine();
 
             switch (choice) {
-                case "1"://need to add function
+                case "1":
+
                     break;
                 case "2"://need to add function
                     break;
