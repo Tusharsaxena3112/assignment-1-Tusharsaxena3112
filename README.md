@@ -94,7 +94,7 @@ Jim Carrey's contact deleted from list!
 ```
 ---
 
-Kindly DO NOT create the program in a single `Main` class. Try out some Object-Oriented Programming and
+Kindly DO NOT create the program in a single `Main.Main` class. Try out some Object-Oriented Programming and
 use your skills from your software engineering classes as well.
 
 Steps to attempt this assignment:
