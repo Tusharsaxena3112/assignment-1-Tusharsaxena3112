@@ -8,13 +8,6 @@ import java.util.Scanner;
 import functions.Functions;
 
 public class Main {
-
-    //Press 1 to add a new contact
-    //Press 2 to view all contacts
-    //Press 3 to search for a contact
-    //Press 4 to delete a contact
-    //Press 5 to exit program
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         LinkedList linkedList = new LinkedList();
