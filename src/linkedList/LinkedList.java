@@ -185,6 +185,25 @@ public class LinkedList {
         System.out.println();
     }
 
+    public void getNode(int pos){
+        var current = first;
+        int index= 0;
+        while(current!=null){
+            if(index==pos){
+                System.out.println();
+                System.out.println("-----------------------*-------------------------");
+                System.out.println("Name:" + current.value.getFirstName() + " " + current.value.getLastName());
+                System.out.println("Contacts:" + current.value.getContacts().toString());
+                System.out.println("Email:" + current.value.getEmail());
+                System.out.println("------------------------*-------------------------");
+                System.out.println();
+                break;
+            }
+            index++;
+            current=current.next;
+        }
+    }
+
     private class Node {
         private Person value;
         private Node next;

@@ -33,14 +33,20 @@ public class Functions {
 
     }
 
-//    public void searchContact(LinkedList linkedList){
-//        System.out.println("Enter Name of the user you want to search:");
-//        String name = scanner.nextLine();
-//        System.out.println("Enter email of the user:");
-//        String email = scanner.nextLine();
-//
-//        linkedList.contains()
-//    }
+    public void searchContact(LinkedList linkedList){
+        System.out.println("Enter Name of the user you want to search:");
+        String name = scanner.nextLine();
+        System.out.println("Enter email of the user:");
+        String email = scanner.nextLine();
+
+        if(linkedList.indexOf(name,email)>=0){
+            System.out.println("Match found!");
+            linkedList.getNode(linkedList.indexOf(name,email));
+        }
+        else{
+            System.out.println("No match!!");
+        }
+    }
 
     public void deleteContact(LinkedList linkedList){
         if(!linkedList.isEmpty()){

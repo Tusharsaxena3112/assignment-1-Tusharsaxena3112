@@ -40,7 +40,7 @@ public class Main {
                     break;
                 case "2":functions.showContacts(linkedList);
                     break;
-                case "3"://need to add function
+                case "3":functions.searchContact(linkedList);
                     break;
                 case "4":functions.deleteContact(linkedList);
                     break;
