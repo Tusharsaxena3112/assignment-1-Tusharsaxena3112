@@ -2,7 +2,8 @@ package linkedList;
 
 import person.Person;
 
-public class LinkedList<Person> {
+public class LinkedList {
+    Person person;
     private Node first;
     private Node last;
 
@@ -131,10 +132,15 @@ public class LinkedList<Person> {
 
     public void display() {
         var current = first;
+        System.out.println("-----------------------*-------------------------");
         while (current != null) {
-            System.out.print(current.value + " ");
+            System.out.println("Name:"+current.value.getFirstName()+" "+current.value.getLastName());
+            System.out.println("Contacts:"+current.value.getContacts().toString());
+            System.out.println("Email:"+current.value.getEmail());
             current = current.next;
         }
+        System.out.println("------------------------*-------------------------");
+        System.out.println();
     }
 
     private class Node {

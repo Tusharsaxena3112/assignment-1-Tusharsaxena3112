@@ -20,7 +20,15 @@ public class Functions {
         System.out.println("Enter your email address:");
         String email = scanner.nextLine();
         linkedList.addLast(new Person(firstName,lastName,arrayList,email));
-        System.out.println(firstName+" "+lastName+"added to your contacts");
+        System.out.println(firstName+" "+lastName+" added to your contacts");
+    }
+
+    public void showContacts(LinkedList linkedList){
+        linkedList.display();
+    }
+
+    public void searchContact(){
+        
     }
 
 }

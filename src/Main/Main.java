@@ -17,12 +17,13 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        LinkedList linkedList = new LinkedList<Person>();
+        LinkedList linkedList = new LinkedList();
         Functions functions = new Functions();
 
         System.out.println("Hey there !! My name is Tushar Saxena " +
                 ".. Here what can I do for you--->>");
-        while(true) {
+        int c=0;
+        while(c!=5) {
             System.out.println("<----------x------x---------->");
             System.out.println("Press 1 to add a new contact");
             System.out.println("Press 2 to view all contacts");
@@ -34,16 +35,18 @@ public class Main {
             String choice = scanner.nextLine();
 
             switch (choice) {
-                case "1":
-
+               case "1":
+                    functions.addContact(linkedList);
                     break;
-                case "2"://need to add function
+                case "2":functions.showContacts(linkedList);
                     break;
                 case "3"://need to add function
                     break;
                 case "4"://need to add function
                     break;
-                case "5"://need to add function
+                case "5":
+                    c=5;
+                    System.out.println("Thank you for using our App..");
                     break;
                 default:
                     // need to add functionality
