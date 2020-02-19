@@ -25,10 +25,16 @@ public class Main {
 
             switch (choice) {
                 case "1"://need to add function
+                    break;
                 case "2"://need to add function
+                    break;
                 case "3"://need to add function
+                    break;
                 case "4"://need to add function
+                    break;
                 case "5"://need to add function
+                default:
+                    // need to add functionality
 
             }
         }
