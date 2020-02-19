@@ -1,10 +1,12 @@
 package linkedList;
 
-public class LinkedList {
+import person.Person;
+
+public class LinkedList<Person> {
     private Node first;
     private Node last;
 
-    public void addLast(int element) {
+    public void addLast(Person element) {
         Node node = new Node(element);
         if (isEmpty()) {
             first = last = node;
@@ -14,7 +16,7 @@ public class LinkedList {
         }
     }
 
-    public void addFirst(int element) {
+    public void addFirst(Person element) {
         Node node = new Node(element);
         if (isEmpty()) {
             first = last = node;
@@ -28,7 +30,7 @@ public class LinkedList {
         return first == null;
     }
 
-    public int indexOf(int element) {
+    public int indexOf(Person element) {
         Node current = first;
         int index = 0;
         while (current != null) {
@@ -41,7 +43,7 @@ public class LinkedList {
         return -1;
     }
 
-    public boolean contains(int element) {
+    public boolean contains(Person element) {
         if (indexOf(element) != -1) {
             return true;
         }
@@ -75,32 +77,32 @@ public class LinkedList {
         return index;
     }
 
-    public void sort() {
-        int temp;
-        for (int i = size() - 1; i > 1; i--) {
-            var current = first;
-            for (int j = 0; j < i; j++) {
-                if (current.value > current.next.value) {
-                    temp = current.value;
-                    current.value = current.next.value;
-                    current.next.value = temp;
-                }
-                current = current.next;
-            }
-        }
-    }
+//    public void sort() {
+//        int temp;
+//        for (int i = size() - 1; i > 1; i--) {
+//            var current = first;
+//            for (int j = 0; j < i; j++) {
+//                if (current.value > current.next.value) {
+//                    temp = current.value;
+//                    current.value = current.next.value;
+//                    current.next.value = temp;
+//                }
+//                current = current.next;
+//            }
+//        }
+//    }
 
-    public void addAt(int pos, int element) {
-        Node node = new Node(element);
-        var current = first;
-        int index = 1;
-        while (index < pos - 1) {
-            current = current.next;
-            index++;
-        }
-        node.next = current.next;
-        current.next = node;
-    }
+//    public void addAt(int pos, int element) {
+//        Node node = new Node(element);
+//        var current = first;
+//        int index = 1;
+//        while (index < pos - 1) {
+//            current = current.next;
+//            index++;
+//        }
+//        node.next = current.next;
+//        current.next = node;
+//    }
 
     public void deleteBetween(int pos) {
         int index = 0;
@@ -136,10 +138,10 @@ public class LinkedList {
     }
 
     private class Node {
-        private int value;
+        private Person value;
         private Node next;
 
-        public Node(int value) {
+        public Node(Person value) {
             this.value = value;
         }
     }
