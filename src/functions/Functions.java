@@ -17,6 +17,21 @@ public class Functions {
         System.out.println("Enter your Contact:");
         String contact = scanner.nextLine();
         arrayList.add(contact);
+        while(true){
+            System.out.println("Do you want to add another contact? ");
+            String choice = scanner.nextLine();
+            if(choice.equals("y")){
+                System.out.println("Enter another contact:");
+                String cont = scanner.nextLine();
+                arrayList.add(cont);
+            }
+            else if(choice.equals("n")){
+                break;
+            }
+            else{
+                System.out.println("Invalid selection select either y or n.");
+            }
+        }
         System.out.println("Enter your email address:");
         String email = scanner.nextLine();
         linkedList.addLast(new Person(firstName,lastName,arrayList,email));
