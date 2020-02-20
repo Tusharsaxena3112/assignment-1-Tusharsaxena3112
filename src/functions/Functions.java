@@ -51,7 +51,7 @@ public class Functions {
         System.out.println("Enter your email address:");
         while(true){
             String temp = scanner.nextLine();
-            if(temp.matches("[a-z]+\\.[a-z]+_cs18@[a-z]+\\.[a-z]+")){
+            if(temp.matches("^[a-z]+[0-1]+@[a-z]+\\.[a-z]+$")){
 //               String email = temp;
                 linkedList.addLast(new Person(firstName,lastName,arrayList,temp));
                 break;
@@ -68,7 +68,7 @@ public class Functions {
             linkedList.display();
         }
         else{
-            System.out.println("No contacts.");
+            System.out.println("No contacts.You dont have any contacts in your contact list . Must add first.");
         }
 
     }
@@ -99,7 +99,7 @@ public class Functions {
             System.out.println("Deleted..!!");
         }
         else{
-            System.out.println("No Contacts.");
+            System.out.println("No Contacts.You must need to add contacts Before you could delete..");
         }
     }
 
