@@ -15,15 +15,31 @@ public class Functions {
         System.out.println("Enter your last Name:");
         String lastName = scanner.nextLine();
         System.out.println("Enter your Contact:");
-        String contact = scanner.nextLine();
-        arrayList.add(contact);
+        while(true){
+            String contact = scanner.nextLine();
+            if(contact.matches("[0-9]{10}")){
+                arrayList.add(contact);
+                break;
+            }
+            else{
+                System.out.println("Add a valid contact.");
+            }
+        }
         while(true){
             System.out.println("Do you want to add another contact? ");
             String choice = scanner.nextLine();
-            if(choice.equals("y")){
+            if(choice.equals("y")) {
                 System.out.println("Enter another contact:");
                 String cont = scanner.nextLine();
-                arrayList.add(cont);
+                while(true){
+                    if (cont.matches("[0-9]{10}")) {
+                        arrayList.add(cont);
+                        break;
+                    }
+                    else{
+                        System.out.println("Add valid contact");
+                    }
+                }
             }
             else if(choice.equals("n")){
                 break;
@@ -33,8 +49,17 @@ public class Functions {
             }
         }
         System.out.println("Enter your email address:");
-        String email = scanner.nextLine();
-        linkedList.addLast(new Person(firstName,lastName,arrayList,email));
+        while(true){
+            String temp = scanner.nextLine();
+            if(temp.matches("[a-z]+\\.[a-z]+_cs18@[a-z]+\\.[a-z]+")){
+//               String email = temp;
+                linkedList.addLast(new Person(firstName,lastName,arrayList,temp));
+                break;
+            }
+            else{
+                System.out.println("Invalid email address ! Enter again");
+            }
+        }
         System.out.println(firstName+" "+lastName+" added to your contacts");
     }
 
