@@ -51,7 +51,7 @@ public class Functions {
         System.out.println("Enter your email address:");
         while(true){
             String temp = scanner.nextLine();
-            if(temp.matches("^[a-z]+[0-1]+@[a-z]+\\.[a-z]+$")){
+            if(temp.matches("^[a-z]+[0-9]+@[a-z]+\\.[a-z]+$")){
 //               String email = temp;
                 linkedList.addLast(new Person(firstName,lastName,arrayList,temp));
                 break;
@@ -94,6 +94,7 @@ public class Functions {
                     " to delete the contact.");
             linkedList.displayOne();
             int choice = scanner.nextInt();
+            scanner.nextLine();
             linkedList.deleteNode(choice);
             linkedList.displayOne();
             System.out.println("Deleted..!!");
