@@ -10,8 +10,16 @@ public class Functions {
     private Scanner scanner = new Scanner(System.in);
     public void addContact(LinkedList linkedList){
         ArrayList<String> arrayList = new ArrayList<>();
-        System.out.println("Enter your first Name:");
-        String firstName = scanner.nextLine();
+        System.out.println("Enter your first Name(only alphabets are allowed):");
+        while(true){
+            String firstName = scanner.nextLine();
+            if(firstName.matches("[a-zA-Z]+")){
+                break;
+            }
+            else{
+                System.out.println("Enter again ! Must have only Alphabets");
+            }
+        }
         System.out.println("Enter your last Name:");
         String lastName = scanner.nextLine();
         System.out.println("Enter your Contact:");
@@ -63,6 +71,8 @@ public class Functions {
         System.out.println(firstName+" "+lastName+" added to your contacts");
     }
 
+
+
     public void showContacts(LinkedList linkedList){
         if(!linkedList.isEmpty()){
             linkedList.display();
@@ -87,6 +97,8 @@ public class Functions {
             System.out.println("No match!!");
         }
     }
+
+
 
     public void deleteContact(LinkedList linkedList){
         if(!linkedList.isEmpty()){
