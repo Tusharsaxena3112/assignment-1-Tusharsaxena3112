@@ -11,17 +11,27 @@ public class Functions {
     public void addContact(LinkedList linkedList){
         ArrayList<String> arrayList = new ArrayList<>();
         System.out.println("Enter your first Name(only alphabets are allowed):");
+        String firstName = scanner.nextLine();
         while(true){
-            String firstName = scanner.nextLine();
             if(firstName.matches("[a-zA-Z]+")){
                 break;
             }
             else{
                 System.out.println("Enter again ! Must have only Alphabets");
             }
+            firstName = scanner.nextLine();
         }
-        System.out.println("Enter your last Name:");
+        System.out.println("Enter your last Name(only alphabets are allowed):");
         String lastName = scanner.nextLine();
+        while(true){
+            if(lastName.matches("[a-zA-Z]+")){
+                break;
+            }
+            else{
+                System.out.println("Invalid name! Enter again");
+            }
+            lastName=scanner.nextLine();
+        }
         System.out.println("Enter your Contact:");
         while(true){
             String contact = scanner.nextLine();
@@ -34,7 +44,7 @@ public class Functions {
             }
         }
         while(true){
-            System.out.println("Do you want to add another contact? ");
+            System.out.println("Do you want to add another contact? y or n ");
             String choice = scanner.nextLine();
             if(choice.equals("y")) {
                 System.out.println("Enter another contact:");
