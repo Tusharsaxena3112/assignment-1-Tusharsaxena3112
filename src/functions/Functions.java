@@ -41,6 +41,7 @@ public class Functions {
             }
             else{
                 System.out.println("Add a valid contact.");
+                break;
             }
         }
         while(true){

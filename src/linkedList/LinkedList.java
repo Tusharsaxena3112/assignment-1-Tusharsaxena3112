@@ -2,8 +2,8 @@ package linkedList;
 
 import person.Person;
 
-public class LinkedList {
-    Person person;
+public class LinkedList{
+//    Person person;
     private Node first;
     private Node last;
 
