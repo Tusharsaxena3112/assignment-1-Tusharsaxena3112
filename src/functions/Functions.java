@@ -41,23 +41,21 @@ public class Functions {
             }
             else{
                 System.out.println("Add a valid contact.");
-                break;
             }
         }
         while(true){
             System.out.println("Do you want to add another contact? y or n ");
             String choice = scanner.nextLine();
             if(choice.equals("y")) {
-                System.out.println("Enter another contact:");
-                String cont = scanner.nextLine();
                 while(true){
+                    System.out.println("Enter another contact:");
+                    String cont = scanner.nextLine();
                     if (cont.matches("[0-9]{10}")) {
                         arrayList.add(cont);
                         break;
                     }
                     else{
                         System.out.println("Add valid contact");
-                        break;
                     }
                 }
             }
