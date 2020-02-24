@@ -57,6 +57,7 @@ public class Functions {
                     }
                     else{
                         System.out.println("Add valid contact");
+                        break;
                     }
                 }
             }
